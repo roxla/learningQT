@@ -1,0 +1,25 @@
+<RCC>
+    <qresource prefix="/new/prefix1">
+        <file>键盘.png</file>
+        <file>emj/1.png</file>
+        <file>emj/2.png</file>
+        <file>emj/3.png</file>
+        <file>emj/4.png</file>
+        <file>emj/5.png</file>
+        <file>emj/6.png</file>
+        <file>emj/7.png</file>
+        <file>emj/8.png</file>
+        <file>emj/9.png</file>
+        <file>emj/10.png</file>
+        <file>emj/11.png</file>
+        <file>emj/12.png</file>
+        <file>emj/13.png</file>
+        <file>emj/14.png</file>
+        <file>emj/15.png</file>
+        <file>emj/16.png</file>
+        <file>emj/17.png</file>
+        <file>emj/18.png</file>
+        <file>emj/19.png</file>
+        <file>emj/20.png</file>
+    </qresource>
+</RCC>

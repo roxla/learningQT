@@ -1,0 +1,12 @@
+INPUT(
+./release\main.o
+./release\loginwindow.o
+./release\mainwindow.o
+./release\lightwindow.o
+./release\airwindow.o
+./release\qrc_pic.o
+./release\moc_loginwindow.o
+./release\moc_mainwindow.o
+./release\moc_lightwindow.o
+./release\moc_airwindow.o
+);

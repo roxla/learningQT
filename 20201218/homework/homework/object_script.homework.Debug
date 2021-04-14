@@ -1,0 +1,12 @@
+INPUT(
+./debug\main.o
+./debug\loginwindow.o
+./debug\mainwindow.o
+./debug\lightwindow.o
+./debug\airwindow.o
+./debug\qrc_pic.o
+./debug\moc_loginwindow.o
+./debug\moc_mainwindow.o
+./debug\moc_lightwindow.o
+./debug\moc_airwindow.o
+);

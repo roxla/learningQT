@@ -1,0 +1,53 @@
+#ifndef CAMERA_H
+#define CAMERA_H
+
+#include <stdio.h>
+#include <linux/videodev2.h>  //跟V4L2架构有关的头文件
+#include <sys/mman.h>
+#include <sys/types.h>
+#include <sys/stat.h>
+#include <fcntl.h>
+#include <string.h>
+#include <strings.h>
+#include <stdlib.h>
+#include <stropts.h>
+#include <unistd.h>
+
+// 粤嵌买的这款摄像头：最大支持640*480大小的画面
+#define W 160
+#define H 120
+// 定义缓冲块个数
+#define FRAME 4
+// 摄像头显示坐标
+#define X 640
+#define Y 0
+
+// 自定义一个结构体存放每个缓冲块的首地址和大小
+struct bufattr
+{
+    void *start; // 缓冲块的首地址
+    int somelength; // 缓冲块的大小
+};
+
+class Camera
+{
+public:
+    Camera();
+    // 数据转换
+    int yuvtorgb(int y,int u,int v);
+    int allyuvtorgb(char *yuvdata,int *argbdata);
+    //初始化摄像头
+    int camera_init();
+    //启动摄像头捕捉画面
+    int camera_capture();
+    //摄像头的关闭
+    int camera_uninit();
+private:
+    int camerafd;
+    int lcdfd;
+    int *lcdmem;
+    // 定义结构体数组存放4个缓冲块的信息
+    struct bufattr array[FRAME];
+};
+
+#endif // CAMERA_H
